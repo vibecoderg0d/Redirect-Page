@@ -1,15 +1,20 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Redirecting to Deal…</title>
-    <meta name="robots" content="noindex">
+    <meta charset="UTF-8" />
+    <meta name="robots" content="noindex" />
+    <title>Redirecting...</title>
     <script>
       const params = new URLSearchParams(window.location.search);
       const target = params.get("to");
+
       if (target) {
         window.location.href = decodeURIComponent(target);
       } else {
-        document.body.innerHTML = "<h1>No deal link found 😅</h1>";
+        document.body.innerHTML = `
+          <h1>No deal link found 🥲</h1>
+          <p>Try visiting: <code>?to=https://www.amazon.com/dp/B0BHX9WTYR?tag=letsmakemon0d-20</code></p>
+        `;
       }
     </script>
   </head>
