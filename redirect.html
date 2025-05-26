@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Redirecting to Deal…</title>
+    <meta name="robots" content="noindex">
+    <script>
+      const params = new URLSearchParams(window.location.search);
+      const target = params.get("to");
+      if (target) {
+        window.location.href = decodeURIComponent(target);
+      } else {
+        document.body.innerHTML = "<h1>No deal link found 😅</h1>";
+      }
+    </script>
+  </head>
+  <body>
+    <p>Redirecting to your deal…</p>
+  </body>
+</html>
